@@ -249,6 +249,18 @@ function closeArcadeScreen() {
   closeGamePlayer();
 }
 
+function returnToStudyTools() {
+  if (arcadeScreen.classList.contains("is-hidden")) {
+    return;
+  }
+
+  if (document.fullscreenElement && document.exitFullscreen) {
+    document.exitFullscreen().catch(() => {});
+  }
+
+  closeArcadeScreen();
+}
+
 function isTypingInField(target) {
   return ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName);
 }
@@ -605,6 +617,19 @@ function openGame(game) {
   }
 }
 
+function installLocalGameShortcuts() {
+  try {
+    gameFrame.contentWindow.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        window.parent.postMessage({ type: "study-tools:escape" }, window.location.origin);
+      }
+    });
+  } catch {
+    // Cross-site games do not allow the parent page to install keyboard shortcuts.
+  }
+}
+
 function closeGamePlayer() {
   gamePlayer.classList.add("is-hidden");
   gameBrowser.classList.remove("is-hidden");
@@ -679,13 +704,28 @@ resetConverter.addEventListener("click", resetUnitConverter);
 closeArcade.addEventListener("click", closeArcadeScreen);
 gameSearch.addEventListener("input", renderGameLibrary);
 closeGame.addEventListener("click", closeGamePlayer);
+gameFrame.addEventListener("load", installLocalGameShortcuts);
 fullscreenGame.addEventListener("click", () => {
   if (gameFrame.requestFullscreen) {
     gameFrame.requestFullscreen();
   }
 });
 
+window.addEventListener("message", (event) => {
+  if (event.origin !== window.location.origin || event.data?.type !== "study-tools:escape") {
+    return;
+  }
+
+  returnToStudyTools();
+});
+
 window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    event.preventDefault();
+    returnToStudyTools();
+    return;
+  }
+
   const isArcadeShortcut =
     event.altKey &&
     event.shiftKey &&
