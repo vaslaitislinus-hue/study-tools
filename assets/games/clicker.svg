@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#0b0f14"/>
+  <circle cx="320" cy="180" r="112" fill="#2f6f73"/>
+  <circle cx="320" cy="180" r="72" fill="#4fb5b8"/>
+  <path d="M320 84v-42M320 318v-42M416 180h42M182 180h42M388 112l30-30M222 278l30-30M252 112l-30-30M418 278l-30-30" stroke="#f6f7f9" stroke-width="16" stroke-linecap="round" opacity=".8"/>
+  <text x="204" y="194" fill="#0b0f14" font-family="Arial, sans-serif" font-size="46" font-weight="900">CLICK</text>
+  <text x="64" y="372" fill="#f6f7f9" font-family="Arial, sans-serif" font-size="34" font-weight="700">Clicker</text>
+</svg>

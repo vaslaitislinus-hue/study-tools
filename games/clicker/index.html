@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicker</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { display: grid; min-height: 100vh; margin: 0; place-items: center; color: #f6f7f9; background: #07080d; font-family: Inter, system-ui, sans-serif; }
+      main { width: min(460px, calc(100% - 28px)); text-align: center; }
+      h1 { margin: 0 0 8px; }
+      .score { margin: 0 0 20px; color: rgba(255, 255, 255, 0.68); font-weight: 800; }
+      .click { width: min(260px, 70vw); aspect-ratio: 1; border: 0; border-radius: 50%; color: #071013; background: #46b9bd; box-shadow: 0 18px 60px rgba(70, 185, 189, 0.28); font-size: 2rem; font-weight: 950; cursor: pointer; }
+      .click:active { transform: scale(0.97); }
+      .shop { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 22px; }
+      .shop button { min-height: 48px; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; color: #f6f7f9; background: #151822; font: inherit; font-weight: 800; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Clicker</h1>
+      <p class="score" id="score">0 points</p>
+      <button class="click" id="click" type="button">CLICK</button>
+      <div class="shop">
+        <button id="upgrade" type="button">Upgrade: 25</button>
+        <button id="auto" type="button">Auto: 50</button>
+      </div>
+    </main>
+    <script>
+      const scoreText = document.querySelector("#score");
+      const click = document.querySelector("#click");
+      const upgrade = document.querySelector("#upgrade");
+      const auto = document.querySelector("#auto");
+      let points = 0;
+      let power = 1;
+      let upgradeCost = 25;
+      let autoCost = 50;
+      let autoRate = 0;
+      function render() {
+        scoreText.textContent = `${Math.floor(points)} points · +${power} per click · ${autoRate}/sec`;
+        upgrade.textContent = `Upgrade: ${upgradeCost}`;
+        auto.textContent = `Auto: ${autoCost}`;
+      }
+      click.addEventListener("click", () => { points += power; render(); });
+      upgrade.addEventListener("click", () => { if (points < upgradeCost) return; points -= upgradeCost; power += 1; upgradeCost = Math.ceil(upgradeCost * 1.8); render(); });
+      auto.addEventListener("click", () => { if (points < autoCost) return; points -= autoCost; autoRate += 1; autoCost = Math.ceil(autoCost * 2); render(); });
+      setInterval(() => { points += autoRate; render(); }, 1000);
+      render();
+    </script>
+  </body>
+</html>

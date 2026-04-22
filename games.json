@@ -1,0 +1,85 @@
+[
+  {
+    "id": "bloxd",
+    "title": "Bloxd.io",
+    "category": "Minecraft",
+    "thumb": "https://imgs.crazygames.com/games/bloxdhop-io/cover_16x9-1709115453824.png?metadata=none&quality=80&width=675&fit=crop&dpr=1",
+    "url": "https://bloxd.io",
+    "status": "live",
+    "layout": "hero"
+  },
+  {
+    "id": "slope",
+    "title": "Slope",
+    "category": "Arcade",
+    "thumb": "assets/games/slope.jpeg",
+    "url": "games/slope/index.html",
+    "status": "live",
+    "layout": "wide"
+  },
+  {
+    "id": "2048",
+    "title": "2048",
+    "category": "Puzzle",
+    "thumb": "assets/games/2048.svg",
+    "url": "games/2048/index.html",
+    "status": "live"
+  },
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "category": "Puzzle",
+    "thumb": "assets/games/hextris.png",
+    "url": "https://hextris.github.io/hextris/",
+    "status": "live"
+  },
+  {
+    "id": "clumsy-bird",
+    "title": "Clumsy Bird",
+    "category": "Arcade",
+    "thumb": "assets/games/clumsy-bird.png",
+    "url": "games/clumsy-bird/index.html",
+    "status": "live"
+  },
+  {
+    "id": "radius-raid",
+    "title": "Radius Raid",
+    "category": "Shooter",
+    "thumb": "assets/games/radius-raid.png",
+    "url": "games/radius-raid/index.html",
+    "status": "live",
+    "layout": "wide"
+  },
+  {
+    "id": "snake",
+    "title": "Flexi Snake",
+    "category": "Classic",
+    "thumb": "https://static.gamezop.com/SkQwnwnbK/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/SkQwnwnbK",
+    "status": "live"
+  },
+  {
+    "id": "tic-tac-toe",
+    "title": "Tic Tac Toe",
+    "category": "Classic",
+    "thumb": "assets/games/tic-tac-toe.png",
+    "url": "games/tic-tac-toe/index.html",
+    "status": "live"
+  },
+  {
+    "id": "clicker",
+    "title": "Clicker",
+    "category": "Clicker",
+    "thumb": "assets/games/clicker.svg",
+    "url": "games/clicker/index.html",
+    "status": "live"
+  },
+  {
+    "id": "memory",
+    "title": "Memory Match",
+    "category": "Puzzle",
+    "thumb": "assets/games/memory.png",
+    "url": "games/memory/index.html",
+    "status": "live"
+  }
+]

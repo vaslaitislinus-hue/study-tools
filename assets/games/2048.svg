@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#faf8ef"/>
+  <rect x="118" y="42" width="404" height="304" rx="18" fill="#bbada0"/>
+  <g font-family="Arial, sans-serif" font-weight="900" text-anchor="middle">
+    <rect x="142" y="66" width="80" height="80" rx="10" fill="#eee4da"/>
+    <text x="182" y="120" fill="#776e65" font-size="32">2</text>
+    <rect x="232" y="66" width="80" height="80" rx="10" fill="#ede0c8"/>
+    <text x="272" y="120" fill="#776e65" font-size="32">4</text>
+    <rect x="322" y="66" width="80" height="80" rx="10" fill="#f2b179"/>
+    <text x="362" y="120" fill="#f9f6f2" font-size="32">8</text>
+    <rect x="412" y="66" width="80" height="80" rx="10" fill="#f59563"/>
+    <text x="452" y="120" fill="#f9f6f2" font-size="28">16</text>
+    <rect x="142" y="156" width="80" height="80" rx="10" fill="#f67c5f"/>
+    <text x="182" y="210" fill="#f9f6f2" font-size="28">32</text>
+    <rect x="232" y="156" width="80" height="80" rx="10" fill="#f65e3b"/>
+    <text x="272" y="210" fill="#f9f6f2" font-size="28">64</text>
+    <rect x="322" y="156" width="80" height="80" rx="10" fill="#edcf72"/>
+    <text x="362" y="210" fill="#f9f6f2" font-size="24">128</text>
+    <rect x="412" y="156" width="80" height="80" rx="10" fill="#edcc61"/>
+    <text x="452" y="210" fill="#f9f6f2" font-size="24">256</text>
+    <rect x="142" y="246" width="170" height="76" rx="10" fill="#edc850"/>
+    <text x="227" y="297" fill="#f9f6f2" font-size="28">1024</text>
+    <rect x="322" y="246" width="170" height="76" rx="10" fill="#edc53f"/>
+    <text x="407" y="297" fill="#f9f6f2" font-size="28">2048</text>
+  </g>
+</svg>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { display: grid; min-height: 100vh; margin: 0; place-items: center; color: #f6f7f9; background: #07080d; font-family: Inter, system-ui, sans-serif; }
+      main { width: min(440px, calc(100% - 28px)); }
+      header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+      h1 { margin: 0; font-size: 1.6rem; }
+      button { border: 0; border-radius: 8px; color: inherit; background: #2f6f73; font: inherit; font-weight: 800; cursor: pointer; }
+      #reset { min-height: 38px; padding: 0 14px; }
+      .board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .cell { aspect-ratio: 1; background: #151822; font-size: clamp(2.5rem, 13vw, 5rem); }
+      .cell:hover { background: #1e2431; }
+      .status { min-height: 28px; margin: 16px 0 0; color: rgba(255, 255, 255, 0.72); font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Tic Tac Toe</h1>
+        <button id="reset" type="button">Reset</button>
+      </header>
+      <section class="board" id="board" aria-label="Tic Tac Toe board"></section>
+      <p class="status" id="status">X goes first</p>
+    </main>
+    <script>
+      const board = document.querySelector("#board");
+      const statusText = document.querySelector("#status");
+      const reset = document.querySelector("#reset");
+      const wins = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+      let cells = Array(9).fill("");
+      let player = "X";
+      let over = false;
+      function winner() {
+        for (const [a, b, c] of wins) if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) return cells[a];
+        return cells.every(Boolean) ? "draw" : "";
+      }
+      function render() {
+        board.innerHTML = "";
+        cells.forEach((value, index) => {
+          const cell = document.createElement("button");
+          cell.className = "cell";
+          cell.type = "button";
+          cell.textContent = value;
+          cell.addEventListener("click", () => play(index));
+          board.append(cell);
+        });
+      }
+      function play(index) {
+        if (cells[index] || over) return;
+        cells[index] = player;
+        const result = winner();
+        if (result) {
+          over = true;
+          statusText.textContent = result === "draw" ? "Draw game" : `${result} wins`;
+        } else {
+          player = player === "X" ? "O" : "X";
+          statusText.textContent = `${player}'s turn`;
+        }
+        render();
+      }
+      function start() {
+        cells = Array(9).fill("");
+        player = "X";
+        over = false;
+        statusText.textContent = "X goes first";
+        render();
+      }
+      reset.addEventListener("click", start);
+      start();
+    </script>
+  </body>
+</html>

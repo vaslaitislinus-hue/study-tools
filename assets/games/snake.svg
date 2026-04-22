@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Snake game thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#17341f"/>
+      <stop offset=".55" stop-color="#101820"/>
+      <stop offset="1" stop-color="#07090d"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="2"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="520" rx="34" fill="url(#bg)"/>
+  <rect x="26" y="26" width="848" height="468" rx="24" fill="url(#grid)"/>
+  <path d="M160 332h112v-84h112v-84h178v84h122v84" fill="none" stroke="#56e67e" stroke-width="54" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <circle cx="684" cy="332" r="34" fill="#56e67e"/>
+  <circle cx="696" cy="321" r="5" fill="#06110a"/>
+  <circle cx="696" cy="344" r="5" fill="#06110a"/>
+  <circle cx="160" cy="332" r="38" fill="#31a85a"/>
+  <circle cx="445" cy="164" r="22" fill="#ff3d55"/>
+  <circle cx="445" cy="164" r="8" fill="#ffd166"/>
+  <rect x="60" y="58" width="164" height="46" rx="14" fill="#0b1117" stroke="#56e67e" stroke-opacity=".45"/>
+  <text x="84" y="91" fill="#e9fff0" font-family="Arial, sans-serif" font-size="30" font-weight="800">Snake</text>
+  <text x="60" y="458" fill="#a9f7bc" font-family="Arial, sans-serif" font-size="28" font-weight="700">HTML5 Canvas</text>
+</svg>

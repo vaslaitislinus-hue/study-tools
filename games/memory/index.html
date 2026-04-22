@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Match</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { display: grid; min-height: 100vh; margin: 0; place-items: center; color: #f6f7f9; background: #07080d; font-family: Inter, system-ui, sans-serif; }
+      main { width: min(520px, calc(100% - 28px)); }
+      header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+      h1 { margin: 0; font-size: 1.5rem; }
+      #reset { min-height: 36px; padding: 0 12px; border: 0; border-radius: 8px; color: #fff; background: #2f6f73; font: inherit; font-weight: 800; cursor: pointer; }
+      .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+      .card { aspect-ratio: 1; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: #fff; background: #151822; font-size: clamp(1.8rem, 8vw, 3.5rem); cursor: pointer; }
+      .card.open, .card.done { background: #2f6f73; }
+      .status { min-height: 26px; margin: 14px 0 0; color: rgba(255, 255, 255, 0.7); font-weight: 800; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Memory Match</h1>
+        <button id="reset" type="button">New game</button>
+      </header>
+      <section class="grid" id="grid"></section>
+      <p class="status" id="status">Moves: 0</p>
+    </main>
+    <script>
+      const grid = document.querySelector("#grid");
+      const statusText = document.querySelector("#status");
+      const reset = document.querySelector("#reset");
+      const icons = ["★", "◆", "●", "▲", "☀", "✦", "■", "⬟"];
+      let cards = [];
+      let open = [];
+      let moves = 0;
+      let locked = false;
+      function shuffle(items) { return items.sort(() => Math.random() - 0.5); }
+      function start() {
+        cards = shuffle([...icons, ...icons]).map((icon) => ({ icon, open: false, done: false }));
+        open = [];
+        moves = 0;
+        locked = false;
+        render();
+      }
+      function flip(index) {
+        if (locked || cards[index].open || cards[index].done) return;
+        cards[index].open = true;
+        open.push(index);
+        if (open.length === 2) {
+          moves += 1;
+          const [a, b] = open;
+          if (cards[a].icon === cards[b].icon) {
+            cards[a].done = true;
+            cards[b].done = true;
+            open = [];
+          } else {
+            locked = true;
+            setTimeout(() => {
+              cards[a].open = false;
+              cards[b].open = false;
+              open = [];
+              locked = false;
+              render();
+            }, 700);
+          }
+        }
+        render();
+      }
+      function render() {
+        grid.innerHTML = "";
+        cards.forEach((card, index) => {
+          const button = document.createElement("button");
+          button.className = `card ${card.open ? "open" : ""} ${card.done ? "done" : ""}`;
+          button.type = "button";
+          button.textContent = card.open || card.done ? card.icon : "?";
+          button.addEventListener("click", () => flip(index));
+          grid.append(button);
+        });
+        const won = cards.every((card) => card.done);
+        statusText.textContent = won ? `Solved in ${moves} moves` : `Moves: ${moves}`;
+      }
+      reset.addEventListener("click", start);
+      start();
+    </script>
+  </body>
+</html>
