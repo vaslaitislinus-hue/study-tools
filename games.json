@@ -59,6 +59,112 @@
     "status": "live"
   },
   {
+    "id": "chess-grandmaster",
+    "title": "Chess Grandmaster",
+    "category": "Board",
+    "thumb": "https://static.gamezop.com/rkAXTzkD5kX/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/rkAXTzkD5kX",
+    "status": "live"
+  },
+  {
+    "id": "bubble-shooter-classic",
+    "title": "Bubble Shooter Classic",
+    "category": "Puzzle",
+    "thumb": "https://static.gamezop.com/yVywAGBQ6/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/yVywAGBQ6",
+    "status": "live"
+  },
+  {
+    "id": "ludo-with-friends",
+    "title": "Ludo With Friends",
+    "category": "Board",
+    "thumb": "https://static.gamezop.com/SkhljT2fdgb/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/SkhljT2fdgb",
+    "status": "live",
+    "layout": "wide"
+  },
+  {
+    "id": "carrom-hero",
+    "title": "Carrom Hero",
+    "category": "Sports",
+    "thumb": "https://static.gamezop.com/H1Hgyn6XqAS/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/H1Hgyn6XqAS",
+    "status": "live"
+  },
+  {
+    "id": "pool-master",
+    "title": "Pool Master",
+    "category": "Sports",
+    "thumb": "https://static.gamezop.com/hgempP8Sc/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/hgempP8Sc",
+    "status": "live"
+  },
+  {
+    "id": "solitaire-gold",
+    "title": "Solitaire Gold",
+    "category": "Cards",
+    "thumb": "https://static.gamezop.com/rkPlk2T7qAr/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/rkPlk2T7qAr",
+    "status": "live"
+  },
+  {
+    "id": "spider-solitaire",
+    "title": "Spider Solitaire",
+    "category": "Cards",
+    "thumb": "https://static.gamezop.com/B1MfIa4QCg/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/B1MfIa4QCg",
+    "status": "live"
+  },
+  {
+    "id": "sudoku-classic",
+    "title": "Sudoku Classic",
+    "category": "Puzzle",
+    "thumb": "https://static.gamezop.com/SJgx126Qc0H/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/SJgx126Qc0H",
+    "status": "live"
+  },
+  {
+    "id": "brick-plunge",
+    "title": "Brick Plunge",
+    "category": "Classic",
+    "thumb": "https://static.gamezop.com/BJ9bvzIKdJl/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/BJ9bvzIKdJl",
+    "status": "live"
+  },
+  {
+    "id": "zuno",
+    "title": "ZUNO",
+    "category": "Cards",
+    "thumb": "https://static.gamezop.com/ByQxJnp7qRB/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/ByQxJnp7qRB",
+    "status": "live"
+  },
+  {
+    "id": "escape-run",
+    "title": "Escape Run",
+    "category": "Runner",
+    "thumb": "https://static.gamezop.com/Skz4pzkDqyX/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/Skz4pzkDqyX",
+    "status": "live",
+    "layout": "wide"
+  },
+  {
+    "id": "box-crush",
+    "title": "Box Crush",
+    "category": "Puzzle",
+    "thumb": "https://static.gamezop.com/S1Wrpf1v5ym/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/S1Wrpf1v5ym",
+    "status": "live"
+  },
+  {
+    "id": "fruity-fiesta",
+    "title": "Fruity Fiesta",
+    "category": "Puzzle",
+    "thumb": "https://static.gamezop.com/mKZZW9NXW/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/mKZZW9NXW",
+    "status": "live"
+  },
+  {
     "id": "tic-tac-toe",
     "title": "Tic Tac Toe",
     "category": "Classic",
