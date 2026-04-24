@@ -165,6 +165,47 @@
     "status": "live"
   },
   {
+    "id": "traffic-command",
+    "title": "Traffic Command",
+    "category": "Runner",
+    "thumb": "https://static.gamezop.com/SykGDfUKOkg/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/SykGDfUKOkg",
+    "status": "live",
+    "layout": "wide"
+  },
+  {
+    "id": "little-bouncing-guys",
+    "title": "Little Bouncing Guys",
+    "category": "Arcade",
+    "thumb": "https://static.gamezop.com/Sy6RYB-u4/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/Sy6RYB-u4",
+    "status": "live"
+  },
+  {
+    "id": "blackjack-21-pro",
+    "title": "Blackjack 21 Pro",
+    "category": "Cards",
+    "thumb": "https://static.gamezop.com/H13-Z8sQILx/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/H13-Z8sQILx",
+    "status": "live"
+  },
+  {
+    "id": "yummy-taco",
+    "title": "Yummy Taco",
+    "category": "Casual",
+    "thumb": "https://static.gamezop.com/rJyWCKHbON/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/rJyWCKHbON",
+    "status": "live"
+  },
+  {
+    "id": "crazy-pizza",
+    "title": "Crazy Pizza",
+    "category": "Puzzle",
+    "thumb": "https://static.gamezop.com/SyN0KSWuV/cover.jpg",
+    "url": "https://zv1y2i8p.play.gamezop.com/g/SyN0KSWuV",
+    "status": "live"
+  },
+  {
     "id": "tic-tac-toe",
     "title": "Tic Tac Toe",
     "category": "Classic",
