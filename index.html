@@ -12,7 +12,8 @@
       content="study tools, calculator, word counter, unit converter, homework tools, student tools"
     />
     <meta name="author" content="Quick-Study Guy" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#111827" />
     <link rel="canonical" href="https://quick-study.pages.dev/" />
     <meta property="og:type" content="website" />
@@ -23,12 +24,15 @@
       content="Use quick student tools for calculations, word counts, and unit conversions in one clean browser page."
     />
     <meta property="og:site_name" content="Quick Study Tools" />
+    <meta property="og:image" content="https://quick-study.pages.dev/assets/favicon.svg" />
+    <meta property="og:image:alt" content="Quick Study Tools icon" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Quick Study Tools" />
     <meta
       name="twitter:description"
       content="A free calculator, word counter, and unit converter for students."
     />
+    <meta name="twitter:image" content="https://quick-study.pages.dev/assets/favicon.svg" />
     <title>Quick Study Tools - Calculator, Word Counter, Unit Converter</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
@@ -46,6 +50,15 @@
           "price": "0",
           "priceCurrency": "USD"
         }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Quick Study Tools",
+        "url": "https://quick-study.pages.dev/",
+        "description": "A free calculator, word counter, and unit converter for students."
       }
     </script>
   </head>
@@ -97,8 +110,10 @@
       <section class="content-area">
         <header class="topbar">
           <div>
-            <h1 id="toolTitle">Calculator</h1>
-            <p class="page-note">Quick tools for class notes and homework checks.</p>
+            <p class="eyebrow">Quick Study Tools</p>
+            <h1 class="page-title">Free calculator, word counter, and unit converter</h1>
+            <p id="toolTitle" class="tool-title">Calculator</p>
+            <p class="page-note">Student tools for homework checks, writing, and common conversions.</p>
           </div>
           <div class="status-pill" aria-label="Current mode">
             <span></span>
